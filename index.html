@@ -17,10 +17,11 @@
         
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/courses.js" defer></script>
     </head>
     <body>
         <header>
-            <img src="images/tucker-profile.webp" alt="Profile Picture" width="75px">
+            <img src="images/tucker-profile.webp" alt="Profile Picture" width="75" loading="lazy">
             <span>Tucker Little</span>
             <a href="#" id="hambutton"></a>
         </header>
@@ -49,8 +50,15 @@
                     </figure>
             </section>
             </div>
-            <section class="card">
+            <section class="card choice">
                 <h2>Web and Computer Programming Certificate</h2>
+                <section>
+                    <button id="all">All Courses</button>
+                    <button id="wdd">WDD Courses</button>
+                    <button id="cse">CSE Courses</button>
+                </section>
+                <p id="credits"></p>
+                <div id="courses"></div>
             </section>
         </main>
         <footer>

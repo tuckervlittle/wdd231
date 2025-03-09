@@ -4,32 +4,29 @@
   font-weight: 300;
   font-style: normal;
 }
-
 .kiwi-maru-medium {
   font-family: "Kiwi Maru", serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .merienda-light {
   font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
-
 .merienda-medium {
   font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
+
+
 
 /* Styling */
 :root {
   --bookends: #6DAEC4;
   --labels: #255957;
-  --font: #F4F2D6;
+  --text: #F4F2D6;
   --selection1: #a98743;
   --selection2: #f7c548;
   --black: #000000;
@@ -37,13 +34,16 @@
   --border: #0000003a;
 }
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 900px;
   box-sizing: border-box;
   font-family: "Kiwi Maru", serif;
   font-weight: 300;
   font-style: normal;
 }
+
+
 
 /* Header */
 header {
@@ -52,8 +52,7 @@ header {
   padding-right: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 }
 header img {
   margin-right: .5rem;
@@ -66,6 +65,7 @@ header span {
 }
 
 
+
 /* Navigation */
 nav {
   background: var(--labels);
@@ -75,13 +75,12 @@ nav.open {
   display: flex;
   flex-direction: column;
 }
-
 nav a {
-  color: var(--font);
+  color: var(--text);
   text-decoration: none;
   text-align: center;
-  font-size: 1.2rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: .5rem;
   width: 100%;
   border-bottom: 1px solid var(--border);
 }
@@ -89,13 +88,37 @@ nav a:hover {
   background: var(--selection1);
   color: var(--labels);
 }
+#hambutton {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 2.5rem;
+  display: block;
+  padding: .5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#hambutton:hover {
+  color: var(--selection1);
+}
+#hambutton::before {
+  content: "☰";
+}
+#hambutton.open::before {
+  content: "X";
+}
+#hambutton.open {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 
 
 /* Main */
 h1 {
   margin-left: 1rem;
   font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
@@ -108,17 +131,6 @@ figure {
 main img {
   border-radius: .5rem;
 }
-
-/* Footer */
-footer {
-  background: var(--bookends);
-  padding: 1rem;
-  text-align: center;
-}
-footer p {
-  padding: .25rem;
-}
-
 .card {
   background-color: rgb(243, 243, 243);
   box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.1);
@@ -135,38 +147,47 @@ footer p {
   margin: 0;
   padding: .5rem;
   width: 100%;
-  color: var(--font);
+  color: var(--text);
   font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
-
-#hambutton {
-  color: var(--black);
-  text-decoration: none;
-  font-size: 2.5rem;
-  display: block;
+button {
+  background: var(--selection1);
+  box-shadow: 2px 2px 5px 2.5px rgba(0, 0, 0, 0.288);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
   padding: .5rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  margin: .5rem 0;
+}
+button:hover {
+  background: var(--selection2);
+  box-shadow: none;
+}
+#courses div {
+  border-radius: .75rem;
+  padding: .75rem;
+  margin: .75rem;
+}
+.completed {
+  background: var(--selection2);
+}
+.need {
+  background: var(--selection1);
+  /* color: var(-); */
+}
+#credits p {
+  font-size: .5rem;
 }
 
-#hambutton:hover {
-  color: var(--selection1);
-}
 
-#hambutton::before {
-  content: "☰";
-}
 
-#hambutton.open::before {
-  content: "X";
+/* Footer */
+footer {
+  background: var(--bookends);
+  padding: 1rem;
+  text-align: center;
 }
-
-#hambutton.open {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+footer p {
+  padding: .25rem;
 }

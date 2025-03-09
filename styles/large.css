@@ -13,10 +13,16 @@
     }
 	nav a {
 	  	display: block;
-	  	font-size: 1.5rem;
+	  	font-size: 1rem;
 	}
     .top {
         display: grid;
         grid-template-columns: 1fr 1fr;
-      }
+    }
+	#courses {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 1rem;
+		align-content: center;
+	}
 }
