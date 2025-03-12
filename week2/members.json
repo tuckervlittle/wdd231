@@ -1,0 +1,76 @@
+{
+    "ward": "Waikahe1",
+    "families":[
+        {
+            "family": "Little",
+            "moveInDate": "04/20/2024",
+            "numOfRecords": 5,
+            "visited": true,
+            "members": [
+                {
+                    "name": "Tucker",
+                    "gender": "M",
+                    "dob": "09/20/1995"
+                },
+                {
+                    "name": "Heather",
+                    "gender": "F",
+                    "dob": "08/22/1991"
+                },
+                {
+                    "name": "Cyrus",
+                    "gender": "M",
+                    "dob": "10/25/2009"
+                },
+                {
+                    "name": "Aria",
+                    "gender": "F",
+                    "dob": "11/05/2010"
+                },
+                {
+                    "name": "Shilo",
+                    "gender": "F",
+                    "dob": "10/08/2018"
+                }
+            ]
+        },
+        {
+            "family": "Ahuna",
+            "moveInDate": "01/01/2020",
+            "numOfRecords": 6,
+            "visited": true,
+            "members":[
+                {
+                    "name": "Joseph",
+                    "gender": "M",
+                    "dob": "01/01/1990"
+                },
+                {
+                    "name": "Marlese",
+                    "gender": "F",
+                    "dob": "01/01/1990"
+                },
+                {
+                    "name": "Joseph",
+                    "gender": "M",
+                    "dob": "05/10/2005"
+                },
+                {
+                    "name": "Clara",
+                    "gender": "F",
+                    "dob": "10/20/2007"
+                },
+                {
+                    "name": "Charlie",
+                    "gender": "M",
+                    "dob": "12/25/2010"
+                },
+                {
+                    "name": "Bowen",
+                    "gender": "M",
+                    "dob": "07/04/2015"
+                }
+            ]
+        }
+    ]
+}
