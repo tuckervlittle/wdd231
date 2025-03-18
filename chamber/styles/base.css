@@ -80,11 +80,12 @@ header div {
 
     text-align: center;
 }
-header div h1 {
+header div span {
+    font-size: 3rem;
     margin: 0;
 }
 header div p {
-    font-size: .75rem;
+    font-size: 1rem;
 }
 header div.navbuttons {
     display: flex;
