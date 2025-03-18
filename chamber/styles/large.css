@@ -1,0 +1,42 @@
+@media screen and (min-width: 38rem) {
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header {
+        grid-template-columns: 160px 1fr 70px;
+    }
+
+    #hambutton {
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open{
+        display: flex;
+        width: 100%;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+    .list img {
+        display: flex;
+        width: 270px;
+        height: 180px;
+    }
+
+    footer {
+        display: flex;
+        text-align: left;
+    }
+
+    nav a img {
+        width: 50px;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}

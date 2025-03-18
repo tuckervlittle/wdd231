@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Mitch's Cookies",
+            "address": "101 4th st.",
+            "phone": "(555) 555-5555",
+            "url": "https://www.byui.edu",
+            "image": "https://placecats.com/neo/300/200",
+            "membership": 1
+        },
+        {
+            "name": "Lion Apparel",
+            "address": "102 4th st.",
+            "phone": "(555) 555-5554",
+            "url": "https://www.placecats.com",
+            "image": "https://placecats.com/millie/300/200",
+            "membership": 2
+        },
+        {
+            "name": "Subway",
+            "address": "103 4th st",
+            "phone": "(555) 555-5553",
+            "url": "https://www.subway.com",
+            "image": "https://placecats.com/millie_neo/300/200",
+            "membership": 3
+        },
+        {
+            "name": "Michael's Cookies",
+            "address": "104 4th st.",
+            "phone": "(555) 555-5552",
+            "url": "https://www.byui.edu",
+            "image": "https://placecats.com/neo_banana/300/200",
+            "membership": 1
+        },
+        {
+            "name": "Tiger Apparel",
+            "address": "105 4th st.",
+            "phone": "(555) 555-5551",
+            "url": "https://www.placecats.com",
+            "image": "https://placecats.com/neo_2/300/200",
+            "membership": 2
+        },
+        {
+            "name": "Jersey Mike's",
+            "address": "106 4th st",
+            "phone": "(555) 555-5550",
+            "url": "https://www.jerseymikes.com",
+            "image": "https://placecats.com/bella/300/200",
+            "membership": 3
+        },
+        {
+            "name": "Bear Apparel",
+            "address": "107 4th st.",
+            "phone": "(555) 555-5549",
+            "url": "https://www.placecats.com",
+            "image": "https://placecats.com/poppy/300/200",
+            "membership": 1
+        }
+    ]
+}

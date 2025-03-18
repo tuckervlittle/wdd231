@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timbuktu Chamber of Commerce - Directory</title>
+        <meta name="description" content="Timbuktu Chamber of Commerce Member Directory">
+        <meta name="author" content="Tucker Little">
+        
+        <meta name="og:title" content="Timbuktu Chamber of Commerce - Directory">
+        <meta name="og:type" content="Website">
+        <meta name="og:image" content="">
+        <meta name="og:url" content="https://tuckervlittle.github.io/wdd231/chamber/directory.html">
+        <meta name="og:description" content="Meet the members of the Timbuktu Chamber of Commerce">
+        <meta name="twitter:card" content="summary">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&family=Merienda:wght@300;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/large.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+        
+    </head>
+    <body>
+        <header>
+            <img src="images/flower.svg" alt="Flower Icon">
+            <div>
+                <h1>Timbuktu</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+            <div class="navbuttons">
+                <button id="theme">◑</button>
+                <button id="hambutton"></button>
+            </div>
+            <nav id="navigation">
+                <ul class="menuLinks">
+                    <li><a href="#">Home</a></li>
+                    <li  class="active"><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <img 
+                    srcset="images/hero-small.webp 300w, images/hero.webp 750w"
+                    sizes="(max-width: 600px) 300px, (min-width: 750px) 750px"
+                    src="images/hero.webp"
+                    alt="Timbuktu Market">
+                <div id="event">
+                    <button>Keynote Tickets</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p><b>Timbuktu Chamber of Commerce</b></p>
+                <p>10 Rue De la Paix</p>
+                <p>Timbuktu, Mali 999</p>
+                <p>info@timbuktucc.org</p>
+                <p>(223) 555-2300</p>
+            </div>
+            <div>
+                <nav class="sociallinks">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <img src="images/twitter.svg" alt="X">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="images/linkedin.svg" alt="Linkedin">
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <p>WDD231 Class Project</p>
+                <p>Tucker Little</p>
+                <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+        </body>
+</html>
