@@ -1,20 +1,37 @@
 const currentWeather = document.getElementById("weather");
 const forecastWeather = document.getElementById("forecast");
 
-const current = 'https://api.openweathermap.org/data/2.5/weather?lat=16.773056&lon=-3.004167&appid=db85bbc5c4c0f3b9a1e37c90f9496608&units=imperial';
-const forecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=16.773056&lon=-3.004167&appid=db85bbc5c4c0f3b9a1e37c90f9496608&units=imperial';
+const lat = 16.77138393181868;
+const lon = -3.00532034720192;
+const api = "db85bbc5c4c0f3b9a1e37c90f9496608";
+
+const current = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=db85bbc5c4c0f3b9a1e37c90f9496608&units=imperial`;
+const forecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api}&units=imperial`;
 
 async function getWeather() {
-    const currentResponse = await fetch(current);
-    const currentData = await currentResponse.json();
-    
-    const forecastResponse = await fetch(forecast);
-    const forecastData = await forecastResponse.json();
+    try {
+        const currentResponse = await fetch(current);
+        const forecastResponse = await fetch(forecast);
 
-    console.log(currentData);
-    console.log(forecastData);
+        if (!currentResponse.ok) {
+            const currentError = await currentResponse.text();
+            throw new Error(`Current Weather Error: ${currentError}`);
+        }
+        if (!forecastResponse.ok) {
+            const forecastError = await forecastResponse.text();
+            throw new Error(`Forecast Error: ${forecastError}`);
+        }
 
-    displayResults(currentData, forecastData);
+        const currentData = await currentResponse.json();
+        const forecastData = await forecastResponse.json();
+
+        // console.log(currentData);
+        // console.log(forecastData);
+
+        displayResults(currentData, forecastData);
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+    }
 }
 getWeather();
 
@@ -81,7 +98,7 @@ function displayResults(currentData, forecastData) {
             const forecastDay = forecastData.list[j];
 
             const forecastTemperature = document.createElement('p');
-            forecastTemperature.innerHTML = `<b>${days[(today + i) % 7]}:</b> ${forecastDay.main.temp}&deg;F`;
+            forecastTemperature.innerHTML = `<b>${days[(today + i) % 7]}:</b> ${forecastDay.main.temp_max}/${forecastDay.main.temp_min}&deg;F`;
             divForecast.appendChild(forecastTemperature);
 
             forecastWeather.appendChild(divForecast);
