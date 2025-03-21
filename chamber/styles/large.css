@@ -1,4 +1,4 @@
-@media screen and (min-width: 38rem) {
+@media screen and (min-width: 60rem) {
 
     header h1 {
         font-size: 3.5rem;
@@ -6,6 +6,19 @@
 
     header {
         grid-template-columns: 160px 1fr 70px;
+    }
+
+    header img {
+        max-width: 150px;
+    }
+
+    header div span {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    header div p {
+        font-size: 1rem;
     }
 
     #hambutton {

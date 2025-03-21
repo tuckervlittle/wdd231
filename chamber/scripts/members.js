@@ -2,19 +2,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const cards = document.getElementById('members');
+
+    const spotlight = document.getElementById('spotlight');
     
     const path = './data/members.json';
     
     async function getMembers() {
           const response = await fetch(path);
           const data = await response.json();
-          console.log(data.members);
-          displayMembers(data.members);
+          // console.log(data.members);
+
+          if (cards) displayMembers(data.members);
+          if (spotlight) displaySpotlight(data.members);
     }
     getMembers();
     
     const displayMembers = (allMembers) => {
       allMembers.forEach((member) => {
+        cards.appendChild(createMemberCard(member));
+      });
+    };
+
+    const displaySpotlight = (allMembers) => {
+
+      const spotlightCandidates = allMembers.filter(m => m.membership === 2 || m.membership === 3);
+
+      const selectedMembers = spotlightCandidates.sort(() => 0.5 - Math.random()).slice(0, 3);
+  
+      spotlight.innerHTML = ''; 
+      selectedMembers.forEach((member) => {
+          spotlight.appendChild(createMemberCard(member));
+      });
+    };
+
+    const createMemberCard = (member) => {
+
         const name = document.createElement('h2')
         name.textContent= member.name;
         const address = document.createElement('p')
@@ -50,21 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
         div.appendChild(url)
         div.appendChild(membership)
         section.appendChild(div)
-        cards.appendChild(section)
-      });
-    }
+
+        return section;
+      };
     
     const makeGrid = document.getElementById('grid')
     const makeList = document.getElementById('list')
-    makeGrid.addEventListener('click',() => {
+    if (makeGrid && makeList && cards) {
+      makeGrid.addEventListener('click',() => {
       makeGrid.className="active"
       makeList.className=""
       cards.className='grid'
-    })
+    });
     makeList.addEventListener('click',() => {
       makeList.className="active"
       makeGrid.className=""
       cards.className='list'
-    })
-    
-    })
+    });
+  }
+});
