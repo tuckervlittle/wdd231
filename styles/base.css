@@ -175,6 +175,8 @@ button {
 
   margin: .5rem 0;
   padding: .5rem;
+  min-height: 44px;
+  min-width: 44px;
 }
 button:hover {
   box-shadow: none;
@@ -194,6 +196,38 @@ button:hover {
 }
 #credits p {
   font-size: .5rem;
+}
+
+
+/* Dialog */
+dialog {
+  box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  
+  margin: auto;
+  max-height: fit-content;
+  width: 80%;
+  
+  text-align: left;
+  position: relative;
+}
+dialog > * {
+  padding: 1rem;
+}
+#course-details h2 {
+  padding: 1rem;
+}
+dialog button {
+  position: absolute;
+  right: 1.5rem;
+  top: -.25rem;
+}
+dialog h3 {
+  font-weight: 500;
+}
+::backdrop {
+  background: rgba(216, 194, 134, 0.8);
 }
 
 

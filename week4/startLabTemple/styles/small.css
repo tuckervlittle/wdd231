@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+#mydialog {
+    border-radius: 1rem;
+    padding: 0;
+}
+#mydialog div {
+    display: grid;
+    grid-template-columns: auto 44px;
+    background: #ddd;
+    border-bottom: 1px solid #aaa;
+    padding: .5rem;
+}
+#mydialog h2 {
+    margin: 0;
+    color: #275690;
+}
+#mydialog button {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    height: 44px;
+    box-shadow: 0 0 10px #aaa;
+}
+#mydialog p {
+    padding: 1rem;
+    color: #375170;
+}
+::backdrop {
+    background: rgba(225, 225, 225, .75);
+}
