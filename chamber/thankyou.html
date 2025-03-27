@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Timbuktu Chamber of Commerce - Directory</title>
-        <meta name="description" content="Timbuktu Chamber of Commerce Member Directory">
+        <title>Thank You for Your Application</title>
+        <meta name="description" content="Thank You for Applying to Join the Timbuktu Chamber of Commerce">
         <meta name="author" content="Tucker Little">
-
-        <link rel="icon" href="https://raw.githubusercontent.com/tuckervlittle/wdd231/refs/heads/main/chamber/flower.ico" type="image/x-icon">
         
-        <meta property="og:title" content="Timbuktu Chamber of Commerce - Directory">
+        <link rel="icon" href="https://raw.githubusercontent.com/tuckervlittle/wdd231/refs/heads/main/chamber/flower.ico" type="image/x-icon">
+
+        <meta property="og:title" content="Timbuktu Chamber of Commerce - Join">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://raw.githubusercontent.com/tuckervlittle/wdd231/refs/heads/main/chamber/images/hero.webp">
-        <meta property="og:url" content="https://tuckervlittle.github.io/wdd231/chamber/directory.html">
-        <meta property="og:description" content="Meet the members of the Timbuktu Chamber of Commerce">
+        <meta property="og:url" content="https://tuckervlittle.github.io/wdd231/chamber/join.html">
+        <meta property="og:description" content="Join the Timbuktu Chamber of Commerce">
         <meta property="twitter:card" content="summary">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +26,12 @@
 
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/navigation.js" defer></script>
-        <script src="scripts/members.js" defer></script>
-
+        <script src="scripts/thankyou.js" defer></script>
+        
     </head>
     <body>
         <header>
-            <img src="images/flower.svg" alt="Flower Icon">
+            <img src="images/flower.svg" alt="Flower Icon" loading="lazy">
             <div>
                 <span>Timbuktu</span>
                 <p>Chamber of Commerce</p>
@@ -43,19 +43,15 @@
             <nav id="navigation">
                 <ul class="menuLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li  class="active"><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <h1>Directory</h1>
-            <div class="buttons">
-                <button id="grid" class="active">Grid</button>
-                <button id="list">List</button>
-            </div>
-            <div id="members" class="grid"></div>
+            <h1>Thank You</h1>
+            <div id="thanks"></div>
         </main>
         <footer>
             <div>
@@ -68,13 +64,13 @@
             <div>
                 <nav class="sociallinks">
                     <a href="https://facebook.com" target="_blank">
-                        <img src="images/facebook.svg" alt="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" loading="lazy">
                     </a>
                     <a href="https://x.com" target="_blank">
-                        <img src="images/twitter.svg" alt="X">
+                        <img src="images/twitter.svg" alt="X" loading="lazy">
                     </a>
                     <a href="https://linkedin.com" target="_blank">
-                        <img src="images/linkedin.svg" alt="Linkedin">
+                        <img src="images/linkedin.svg" alt="Linkedin" loading="lazy">
                     </a>
                 </nav>
             </div>

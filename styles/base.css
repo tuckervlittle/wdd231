@@ -210,7 +210,11 @@ dialog {
   width: 80%;
   
   text-align: left;
-  position: relative;
+
+  animation: pop-in 2s ease-out;
+}
+dialog.closing {
+  animation: pop-out .75s ease-in;
 }
 dialog > * {
   padding: 1rem;
@@ -228,6 +232,24 @@ dialog h3 {
 }
 ::backdrop {
   background: rgba(216, 194, 134, 0.8);
+}
+@keyframes pop-in {
+  from {
+    transform: scale(0%);
+    /* opacity: 0; */
+  }
+  to {
+    transform: scale(100%);
+    /* opacity: 1; */
+  }
+}
+@keyframes pop-out {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0%);
+  }
 }
 
 

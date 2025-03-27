@@ -1,19 +1,15 @@
 @media screen and (min-width: 60rem) {
 
-    header h1 {
-        font-size: 3.5rem;
-    }
-
     header {
         grid-template-columns: 160px 1fr 70px;
     }
 
     header img {
-        max-width: 150px;
+        width: 125px;
     }
 
     header div span {
-        font-size: 3rem;
+        font-size: 4rem;
         margin: 0;
     }
 
@@ -31,6 +27,7 @@
     }
 
     nav {
+        display: grid;
         grid-template-rows: 1fr;
     }
 
@@ -38,6 +35,19 @@
         display: flex;
         width: 270px;
         height: 180px;
+    }
+
+    .join {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .join section {
+        width: 46%;
+    }
+
+    .membership {
+        margin: 0;
     }
 
     footer {

@@ -1,4 +1,4 @@
-import { courses } from "../data/courses.mjs";
+import { courses } from "/data/courses.mjs";
 // console.log(courses)
 
 const courseDisplay = document.getElementById("courses");
@@ -49,7 +49,12 @@ function displayCourseDetails(course) {
     `;
     courseDetials.showModal();
 
-    closeModal.addEventListener("click", () => {
-        courseDetials.close();
+    document.getElementById("closeModal").addEventListener("click", () => {
+        courseDetials.classList.add("closing");
+
+        setTimeout(() => {
+            courseDetials.close();
+            courseDetials.classList.remove("closing");
+        }, 740);
     });
 };
