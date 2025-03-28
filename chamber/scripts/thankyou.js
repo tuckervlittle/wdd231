@@ -6,12 +6,13 @@ const userLast = applicantInfo.get('last');
 const userTitle = applicantInfo.get('title');
 const userEmail = applicantInfo.get('email');
 const userPhone = applicantInfo.get('phone');
+const compName = applicantInfo.get('organization')
 const companyDesc = applicantInfo.get('description');
 const userLevel = applicantInfo.get('memberLevel');
 const subDate = applicantInfo.get('hiddendate');
 
 document.getElementById('thanks').innerHTML = `
-<h2>${userFirst} ${userLast} ${displayTitle(userTitle)}</h2>
+<h2>${userFirst} ${userLast}${displayTitle(userTitle)} - ${compName}</h2>
 <p><b>Email:</b> ${userEmail}</p>
 <p><b>Phone:</b> ${displayPhone(userPhone)}</p>
 ${displayCompDesc(companyDesc)}
@@ -21,7 +22,7 @@ ${displayCompDesc(companyDesc)}
 
 function displayTitle(title) {
     if (title != "") {
-        return `- ${title}`
+        return ` - ${title}`
     }
     else {
         return ``
