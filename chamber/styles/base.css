@@ -278,6 +278,14 @@ button.active {
 
 
 /* Directory */
+#spotlight .card,
+#members .card {
+    padding: .75rem;
+}
+#spotlight img,
+#members img {
+    padding: 0;
+}
 .list section {
     display: grid;
     grid-template-columns: auto auto;
