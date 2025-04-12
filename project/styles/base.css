@@ -1,0 +1,249 @@
+
+/* Fonts 
+-----------------------------------------------------------*/
+.kiwi-maru-light {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.kiwi-maru-medium {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.merienda-light {
+    font-family: "Merienda", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+.merienda-medium {
+    font-family: "Merienda", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Universal 
+-----------------------------------------------------------*/
+:root {
+    --header: #c03221;
+    --labels: #3f826d;
+    --selection: #f2d0a4;
+    --accent: #545e75;
+    --other: #4f6d7a;
+    --white: white;
+    --black: black;
+    --border: #0000003a;
+
+}
+
+* {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body 
+-----------------------------------------------------------*/
+body {
+    background: var(--accent);
+
+    margin: 0 auto;
+    max-width: 95%;
+    color: var(--white);
+}
+h1, h2, h3 {
+    font-family: "Merienda", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Header 
+-----------------------------------------------------------*/
+header {
+    background: var(--header);
+    border-bottom-right-radius: 1.1rem;
+    border-bottom-left-radius: 1.1rem;
+    padding: .5rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: end;
+}
+header img {
+    width: 70px;
+}
+header div {
+    color: var(--white);
+
+    padding: .75rem;
+
+    text-align: center;
+}
+header div span {
+    font-family: "Merienda", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+
+    margin: 0;
+}
+header div p {
+    font-size: .75rem;
+}
+header div.navbuttons {
+    display: flex;
+    padding: 0;
+}
+#hambutton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 44px;
+    height: 44px;
+    text-align: center;
+}
+#hambutton::before {
+    content: "☰";
+}
+#hambutton.open::before {
+    content: "X";
+}
+
+/* Nav 
+-----------------------------------------------------------*/
+nav {
+    background: var(--labels);
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+
+    grid-area: 2/1/3/5;
+    display: none;
+    
+    width: 100%;
+        
+    transition: grid-template-rows .5s ease-out;
+}
+nav ul {
+    overflow: hidden;
+}
+nav.open {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+ul.menuLinks li a {
+    color: var(--white);
+    text-decoration: none;
+    
+    padding: .75rem;
+    min-height: 45px;
+    
+    display: block;
+}
+.active.active a {
+    background-color: rgba(0, 0, 0, .2);
+    color: var(--white);
+}
+ul.menuLinks {
+    list-style-type: none;
+
+    width: 100%;
+}
+ul.menuLinks a:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+
+/* Main 
+-----------------------------------------------------------*/
+.card {
+    background: var(--border);
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding-bottom: .25rem;
+}
+.card h2 {
+    background: var(--labels);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.card h2, p, img {
+    padding: .5rem;
+}
+#red {
+    background: var(--header);
+    width: 80%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}
+#blue {
+    background: var(--accent);
+    width: 85%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}
+#green {
+    background: var(--labels);
+    width: 80%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}
+
+
+/* Siteplan 
+-----------------------------------------------------------*/
+#mobile-img {
+    width: 50%;
+    max-width: 250px;
+}
+
+#pc-img {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+
+/* Footer 
+-----------------------------------------------------------*/
+footer {
+    background: var(--header);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    color: var(--white);
+
+    padding: 1rem;
+    text-align: center;
+}
+footer p {
+    font-size: .8rem;
+}
+.sociallinks {
+    background: none;
+
+    display: flex;
+    justify-content: center;
+}
+.sociallinks a {
+    margin: .5rem;
+}
+
+nav a img {
+    width: 44px;
+    margin: 0;
+    padding: 0;
+}
+

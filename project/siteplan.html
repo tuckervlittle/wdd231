@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hilo SCUBA Club - Site Plan</title>
+        <meta name="description" content="Site Plan for the Hilo SCUBA Club's website">
+        <meta name="author" content="Tucker Little">
+
+        <link rel="shortcut icon" href="images/flag.ico" type="image/x-icon">
+        
+        <meta property="og:title" content="Hilo SCUBA Club - Site Plan">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="https://tuckervlittle.github.io/wdd231/project/siteplan.html">
+        <meta property="og:description" content="Site Plan for the Hilo SCUBA Club's website">
+        <meta property="twitter:card" content="summary">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&family=Merienda:wght@300;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/large.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <img src="images/diver.svg" alt="Diver Icon">
+            <div>
+                <span>Hilo SCUBA Club</span>
+                <p>Hilo, Hawaii</p>
+            </div>
+            <div class="navbuttons">
+                <button id="hambutton" aria-label="Show/Hide Navigation"></button>
+            </div>
+            <nav id="navigation">
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="siteplan">
+                <h1>Siteplan</h1>
+                <div class="card">
+                    <h2>Site Name</h2>
+                    <p>Hilo Dive Club</p>
+                    <p>This is a name for a hypothetical club in the Hilo area.</p>
+                </div>
+                <div class="card">
+                    <h2>Site Purpose</h2>
+                    <p>The site gives members and prospective members information about the happenings of the club.</p>
+                </div>
+                <div class="card">
+                    <h2>Scenarios</h2>
+                    <p>What events are coming up?</p>
+                    <p>What is included in a membership?</p>
+                    <p>What do club activities look like?</p>
+                </div>
+                <div class="card">
+                    <h2>Typography</h2>
+                    <p>Merienda - Headers</p>
+                    <p>Kiwi Maru - Everything else</p>
+                </div>
+            </section>
+            <div class="card">
+                <h2>Color Schema</h2>
+                <p id="red">Red: #c03221 - Header/Footer</p>
+                <p id="blue">Blue: #545e75 - Body background</p>
+                <p id="green">Green: #3f826d - Headers/Navigation</p>
+            </div>
+            <div class="card">
+                <h2>Wireframe</h2>
+                <div class="wireframe">
+                    <img id="mobile-img" src="images/mobile-wireframe.webp" alt="Mobile Wireframe" loading="lazy">
+                    <img id="pc-img" src="images/pc-wireframe.webp" alt="Large Screen Wireframe" loading="lazy">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <nav class="sociallinks">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <img src="images/x.svg" alt="X">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="images/instagram.svg" alt="Instagram">
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <p>&copy; <span id="currentYear"></span> Tucker Little</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+        </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hilo SCUBA Club - Events</title>
+        <meta name="description" content="Hilo SCUBA Club Event Schedule">
+        <meta name="author" content="Tucker Little">
+
+        <link rel="shortcut icon" href="images/flag.ico" type="image/x-icon">
+        
+        <meta property="og:title" content="Hilo SCUBA Club - Events">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="https://tuckervlittle.github.io/wdd231/project/events.html">
+        <meta property="og:description" content="Hilo SCUBA Club Event Schedule">
+        <meta property="twitter:card" content="summary">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&family=Merienda:wght@300;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/large.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/members.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <img src="images/diver.svg" alt="Diver Icon">
+            <div>
+                <span>Hilo SCUBA Club</span>
+                <p>Hilo, Hawaii</p>
+            </div>
+            <div class="navbuttons">
+                <button id="hambutton" aria-label="Show/Hide Navigation"></button>
+            </div>
+            <nav id="navigation">
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li  class="active"><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        </main>
+        <footer>
+            <div>
+                <nav class="sociallinks">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="images/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <img src="images/x.svg" alt="X">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="images/instagram.svg" alt="Instagram">
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <p>&copy; <span id="currentYear"></span> Tucker Little</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+        </body>
+</html>
