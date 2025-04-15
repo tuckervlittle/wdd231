@@ -19,6 +19,7 @@ function displayItems(items) {
 
         image.src = `images/${item.image}.webp`
         image.alt = item.name
+        image.loading = `lazy`
 
         address.innerText = item.address
 
