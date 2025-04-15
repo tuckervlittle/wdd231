@@ -1,0 +1,15 @@
+@media only screen and (min-width: 38rem) {
+    #discover div {
+        grid-template-areas: 
+        "image name"
+        "image desc"
+        "image address"
+        "image button";
+    }
+    #discover div p {
+        text-align: center;
+    }
+    #discover img:hover {
+        opacity: .8;
+    }
+}

@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const image = document.createElement('img')
         image.src= member.image
         image.setAttribute('loading', 'lazy')
-        image.setAttribute('width', '300')
-        image.setAttribute('height', '200')
+        // image.setAttribute('width', '300')
+        // image.setAttribute('height', '200')
         image.setAttribute('alt', `${member.name}`)
         const membership = document.createElement('p')
         if (member.membership == 2) {

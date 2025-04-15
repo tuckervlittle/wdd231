@@ -1,19 +1,19 @@
 {
     "members": [
         {
-            "name": "Mitch's Cookies",
-            "address": "101 4th st.",
-            "phone": "(555) 555-5555",
-            "url": "https://www.byui.edu",
-            "image": "https://placecats.com/neo/300/200",
+            "name": "Creative Arts Hawaii",
+            "address": "500 Kalanianaole Ave.",
+            "phone": "(808) 935-7393",
+            "url": "https://creativeartshawaii.com/",
+            "image": "https://creativeartshawaii.com/images/content/creative-arts-store-front.jpg",
             "membership": 1
         },
         {
-            "name": "Lion Apparel",
-            "address": "102 4th st.",
-            "phone": "(555) 555-5554",
-            "url": "https://www.placecats.com",
-            "image": "https://placecats.com/millie/300/200",
+            "name": "Hawaii Island Community Health Center",
+            "address": "450 Kilauea Ave.",
+            "phone": "(808) 333-3600",
+            "url": "https://www.hicommunityhealthcenter.org/",
+            "image": "https://www.hicommunityhealthcenter.org/wp-content/uploads/DSC00083-WHCHCExercise-FinalEdit-1000x500.jpg",
             "membership": 2
         },
         {
@@ -25,35 +25,35 @@
             "membership": 3
         },
         {
-            "name": "Michael's Cookies",
-            "address": "104 4th st.",
-            "phone": "(555) 555-5552",
-            "url": "https://www.byui.edu",
-            "image": "https://placecats.com/neo_banana/300/200",
+            "name": "Car In Hawaii",
+            "address": "159 Kekuanaoa Ave.",
+            "phone": "(808) 430-1711",
+            "url": "https://carinhawaii.com",
+            "image": "https://carinhawaii.com/wp-content/uploads/2015/10/shutterstock_275770292.jpg?w=189",
             "membership": 1
         },
         {
-            "name": "Tiger Apparel",
-            "address": "105 4th st.",
-            "phone": "(555) 555-5551",
-            "url": "https://www.placecats.com",
-            "image": "https://placecats.com/neo_2/300/200",
+            "name": "The Mystic Closet",
+            "address": "164 Kamehameha Ave.",
+            "phone": "(808) 825-2040",
+            "url": "https://www.themysticcloset.com/",
+            "image": "https://www.themysticcloset.com/cdn/shop/files/IMG_1119_540x.jpeg?v=1613520053",
             "membership": 2
         },
         {
-            "name": "Jersey Mike's",
-            "address": "106 4th st",
-            "phone": "(555) 555-5550",
-            "url": "https://www.jerseymikes.com",
-            "image": "https://placecats.com/bella/300/200",
+            "name": "Simply Sisters",
+            "address": "250 Kamehameha Ave.",
+            "phone": "(808) 769-3384",
+            "url": "https://www.lolamillerdesigns.com/",
+            "image": "https://www.lolamillerdesigns.com/cdn/shop/files/Untitled_design_47caebfd-598a-4066-8ddb-59df9810c01c.png?v=1694500075&width=990",
             "membership": 3
         },
         {
-            "name": "Bear Apparel",
-            "address": "107 4th st.",
-            "phone": "(555) 555-5549",
-            "url": "https://www.placecats.com",
-            "image": "https://placecats.com/poppy/300/200",
+            "name": "Shaka Viking LLC",
+            "address": "57 Mamo St.",
+            "phone": "(808) 977-4252",
+            "url": "https://shakaviking.com/",
+            "image": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/468505163_122100844136645000_3454488905330117184_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=DTXv73z0jawQ7kNvwGhQhdY&_nc_oc=AdlG67nU9fEs75OLAgjzHtu2lpaiNBLjLarGZibLE7T6VYeUe-uGtB4JpJpxvVvB1A4&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=dtm2d2WzzpnXULQPNh0YzA&oh=00_AfEg69V8mnHRSL4KN4ggl7WQQj_FxNzAoxSpve2EOsUiJQ&oe=67FF9B7E",
             "membership": 1
         }
     ]

@@ -1,8 +1,8 @@
 const currentWeather = document.getElementById("weather");
 const forecastWeather = document.getElementById("forecast");
 
-const lat = 16.77138393181868;
-const lon = -3.00532034720192;
+const lat = 19.72340197174609;
+const lon = -155.08496823644919;
 const api = "db85bbc5c4c0f3b9a1e37c90f9496608";
 
 const current = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=db85bbc5c4c0f3b9a1e37c90f9496608&units=imperial`;
@@ -25,7 +25,7 @@ async function getWeather() {
         const currentData = await currentResponse.json();
         const forecastData = await forecastResponse.json();
 
-        // console.log(currentData);
+        console.log(currentData);
         // console.log(forecastData);
 
         displayResults(currentData, forecastData);
@@ -98,7 +98,7 @@ function displayResults(currentData, forecastData) {
             const forecastDay = forecastData.list[j];
 
             const forecastTemperature = document.createElement('p');
-            forecastTemperature.innerHTML = `<b>${days[(today + i) % 7]}:</b> ${forecastDay.main.temp_max}/${forecastDay.main.temp_min}&deg;F`;
+            forecastTemperature.innerHTML = `<b>${days[(today + i) % 7]}:</b> ${forecastDay.main.temp_max}&deg;F`;
             divForecast.appendChild(forecastTemperature);
 
             forecastWeather.appendChild(divForecast);

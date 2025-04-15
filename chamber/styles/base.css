@@ -181,6 +181,8 @@ main {
 }
 .card img {
     padding: .75rem;
+    width: 100%;
+    max-width: 300px;
 }
 .card div {
     padding: 0 1rem 1rem 1rem;
@@ -200,6 +202,9 @@ button {
     
     margin: 0 1rem;
     padding: .7rem 1rem;
+
+    min-width: 44px;
+    min-height: 44px;
 }
 button:hover {
     background: rgb(222,119,110);
@@ -285,6 +290,7 @@ button.active {
 #spotlight img,
 #members img {
     padding: 0;
+    max-width: 300px;
 }
 .list section {
     display: grid;
@@ -295,11 +301,11 @@ button.active {
 .list img {
     display: none;
 }
-
 .grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -430,8 +436,10 @@ dialog {
     border-radius: .5rem;
     
     margin: auto;
+    min-height:  5rem;
     max-height: fit-content;
     width: 80%;
+    max-width: 30rem;
     
     text-align: left;
   
@@ -491,6 +499,36 @@ dialog ul {
 }
 #thanks > * {
     padding: .25rem;
+}
+
+/* Discover */
+#discover div {
+    padding: .5rem;
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "image"
+    "desc"
+    "address"
+    "button";
+}
+#discover div h2 {
+    grid-area: name;
+}
+#discover div img {
+    grid-area: image;
+}
+#discover div p {
+    grid-area: desc;
+    padding: .5rem;
+}
+#discover div address {
+    grid-area: address;
+    padding: .5rem;
+}
+#discover div button {
+    grid-area: button;
+    max-height: 44px;
 }
 
 
