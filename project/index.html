@@ -22,15 +22,20 @@
 
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/medium.css">
         <link rel="stylesheet" href="styles/large.css">
 
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/weather.js" defer></script>
+        <script src="scripts/upcoming.js" type="module"></script>
 
     </head>
     <body>
         <header>
-            <img src="images/diver.svg" alt="Diver Icon">
+            <a href="index.html">
+                <img src="images/diver.svg" alt="Diver Icon">
+            </a>
             <div>
                 <span>Hilo SCUBA Club</span>
                 <p>Hilo, Hawaii</p>
@@ -41,13 +46,20 @@
             <nav id="navigation">
                 <ul class="menuLinks">
                     <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="join.html">Join</a></li>
                     <li><a href="events.html">Events</a></li>
+                    <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            
+            <section id="events" class="home">
+                <h1>Home</h1>
+                <div class="hero">
+                    <img src="images/hero.webp" alt="Group Photo">
+                    <div id="weather" class="card"></div>
+                </div>
+                <h2>Upcoming Events</h2>
+            </section>
         </main>
         <footer>
             <div>

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 80rem) {
 
     header {
         grid-template-columns: 160px 1fr 70px;
@@ -29,6 +29,47 @@
     nav {
         display: grid;
         grid-template-rows: 1fr;
+    }
+
+    #events .event {
+        grid-template-areas:
+        "header header"
+        "image date"
+        "image cost"
+        "image requirements"
+        "image desc";
+    }
+    .image {
+        padding-top: .75rem;
+    }
+    .date, .cost, .requirements, .desc {
+        text-align: left;
+    }
+
+    .home {
+        display: grid;
+        grid-template-areas: 
+        "h1 h2"
+        "hero event1"
+        "event2 event3";
+    }
+    .home h1 {
+        grid-area: h1;
+    }
+    .hero {
+        grid-area: hero;
+    }
+    .home h2 {
+        grid-area: h2;
+    }
+    .home > .event:nth-of-type(1) {
+        grid-area: event3;
+    }
+    .home > .event:nth-of-type(2) {
+        grid-area: event1;
+    }
+    .home > .event:nth-of-type(3) {
+        grid-area: event2;
     }
 
     .siteplan {

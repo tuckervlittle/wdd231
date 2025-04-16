@@ -29,7 +29,7 @@
     --header: #c03221;
     --labels: #3f826d;
     --selection: #f2d0a4;
-    --accent: #545e75;
+    --accent: rgb(84, 94, 117);
     --other: #4f6d7a;
     --white: white;
     --black: black;
@@ -173,48 +173,28 @@ ul.menuLinks a:hover {
     margin: 1rem;
     border-radius: 1rem;
     text-align: center;
-    padding-bottom: .25rem;
+    padding-bottom: .75rem;
 }
-.card h2 {
+.card ul, .card p {
+    padding: .5rem 0;
+    border-bottom: dashed 1px #000;
+    width: 90%;
+}
+.card h2, .card h3 {
     background: var(--labels);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-}
-.card h2, p, img {
     padding: .5rem;
+    margin: 0 auto .5rem auto;
+    max-width: 100%;
 }
-#red {
-    background: var(--header);
-    width: 80%;
-    border-radius: 1rem;
-    margin: .25rem auto;
+.card h3 {
+    font-size: 1.5rem;
 }
-#blue {
-    background: var(--accent);
-    width: 85%;
-    border-radius: 1rem;
-    margin: .25rem auto;
+.card img {
+    width: 95%;
+    max-width: 300px;
 }
-#green {
-    background: var(--labels);
-    width: 80%;
-    border-radius: 1rem;
-    margin: .25rem auto;
-}
-
-
-/* Siteplan 
------------------------------------------------------------*/
-#mobile-img {
-    width: 50%;
-    max-width: 250px;
-}
-
-#pc-img {
-    width: 100%;
-    max-width: 600px;
-}
-
 
 
 /* Footer 
@@ -247,3 +227,229 @@ nav a img {
     padding: 0;
 }
 
+
+/* Home 
+-----------------------------------------------------------*/
+.hero {
+    position: relative;
+}
+.hero img {
+    border-radius: 1.5rem;
+    width: 100%;
+}
+h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+#weather {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+#weather img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+
+
+
+/* Events 
+-----------------------------------------------------------*/
+.card ul {
+    list-style-type: none;
+    padding-top: .25rem;
+}
+#events .event {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "image"
+    "date"
+    "cost"
+    "requirements"
+    "desc";
+}
+.title {
+    width: 100%;
+    grid-area: header;
+}
+.image {
+    grid-area: image;
+}
+.date {
+    grid-area: date;
+}
+.cost {
+    grid-area: cost;
+}
+.requirements {
+    grid-area: requirements;
+}
+.desc {
+    grid-area: desc;
+}
+
+
+/* Join 
+-----------------------------------------------------------*/
+.form {
+    margin: 0;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+form > * {
+
+    padding-left: .5rem;
+    display: block;
+}
+label input, textarea {
+    margin-top: .25rem;
+}
+input,
+textarea {
+    border: 1px solid var(--border);
+    border-left-width: .5rem;
+    border-left-color: var(--selection);
+    border-radius: .5rem;
+    
+    padding: .5rem;
+    
+    display: block;
+    min-height: 44px;
+}
+input:required {
+    border-left-color: var(--labels);
+}
+input:required:valid {
+    border-left-color: var(--selection);
+}
+input[type="submit"],
+button {
+    background: var(--labels);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--white);
+    cursor: pointer;
+    
+    margin: 1rem;
+    padding: .7rem 1rem;
+
+    min-width: 44px;
+    min-height: 44px;
+}
+input[type="submit"]:hover, 
+button:hover {
+    background: #659B8A;
+}
+.membership span {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.membership > button {
+    width: 40%;
+}
+.perks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.perks img {
+    border-radius: .5rem;
+    max-width: 100px;
+    margin: 2.75rem;
+}
+dialog {
+    background: var(--accent);
+    color: var(--white);
+    box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 1.2rem;
+    
+    margin: auto;
+    min-height:  fit-content;
+    height: 10rem;
+    width: 80%;
+    max-width: 30rem;
+    
+    text-align: left;
+  
+    animation: pop-in 2s ease-out;
+}
+dialog.closing {
+    animation: pop-out .75s ease-in;
+}
+dialog > * {
+    padding: 1rem;
+}
+#modal h {
+    padding: 1rem;
+    padding-right: 4rem;
+}
+dialog button {
+    border-radius: .75rem;
+    border: none;
+
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+}
+dialog h3 {
+    font-weight: 500;
+}
+#modal ul {
+    padding-left: 3rem;
+    border-bottom: none;
+}
+::backdrop {
+    background: rgba(84, 94, 117, 0.4);
+}
+@keyframes pop-in {
+    from {
+        transform: scale(0%);
+        /* opacity: 0; */
+    }
+    to {
+        transform: scale(100%);
+        /* opacity: 1; */
+    }
+}
+@keyframes pop-out {
+    from {
+        transform: scale(100%);
+    }
+    to {
+        transform: scale(0%);
+    }
+}
+
+
+/* Siteplan 
+-----------------------------------------------------------*/
+#mobile-img {
+    width: 50%;
+    max-width: 250px;
+}
+
+#pc-img {
+    width: 100%;
+    max-width: 600px;
+}
+#red {
+    background: var(--header);
+    width: 80%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}
+#blue {
+    background: var(--accent);
+    width: 85%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}
+#green {
+    background: var(--labels);
+    width: 80%;
+    border-radius: 1rem;
+    margin: .25rem auto;
+}

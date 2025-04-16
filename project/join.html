@@ -22,15 +22,19 @@
 
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/medium.css">
         <link rel="stylesheet" href="styles/large.css">
 
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/membership.js" defer></script>
 
     </head>
     <body>
         <header>
-            <img src="images/diver.svg" alt="Diver Icon">
+            <a href="index.html">
+                <img src="images/diver.svg" alt="Diver Icon">
+            </a>
             <div>
                 <span>Hilo SCUBA Club</span>
                 <p>Hilo, Hawaii</p>
@@ -41,13 +45,54 @@
             <nav id="navigation">
                 <ul class="menuLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="join.html">Join</a></li>
                     <li><a href="events.html">Events</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            
+            <h1>Join</h1>
+            <div class="join">
+                <section class="card form">
+                    <h2>Membership Application</h2>
+                    <form method="GET" action="thanks.html" class="app">
+                        <label>First Name *
+                            <input type="text" name="first" required autocomplete="given-name" title="Your First Name">
+                        </label>
+                        <label>Last Name *
+                            <input type="text" name="last" required autocomplete="family-name" title="Your Last Name">
+                        </label>
+                            
+                        <label>Email *
+                            <input type="email" name="email" required placeholder="johndoe01@gmail.com"  title="Your Email" autocomplete="email">
+                        </label>
+                        <label>Cell Phone 
+                            <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="321-456-1234">
+                        </label>
+
+                        <label>Experience/Certifications
+                            <textarea name="experience"></textarea>
+                        </label>
+    
+                        <input type="submit" value="Apply to Join">
+                        <input type="hidden" name="hiddendate" id="submitdate">
+                        <span>* Required</span>
+                    </form>
+                </section>
+                <section id="levels" class="card membership">
+                    <h2>Membership Info</h2>
+                    <p><strong>Cost:</strong> $100 Anually</p>
+                    <span><b>See the Perks!</b></span>
+                    <div class="perks">
+                        <img src="images/tee.webp" alt="T-Shirt">
+                        <img src="images/key-float.webp" alt="Key-Float">
+                        <img src="images/equipment.webp" alt="Equipment">
+                    </div>
+                        <button id="perks">Learn More</button>
+                    <dialog id="modal">
+                    </dialog>
+                </section>
+            </div>
         </main>
         <footer>
             <div>
