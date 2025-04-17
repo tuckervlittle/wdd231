@@ -72,10 +72,10 @@
     .home h2 {
         grid-area: h2;
     }
-    #event1 {
+    .home #event1 {
         grid-area: event1;
     }
-    #event2 {
+    .home #event2 {
         grid-area: event2;
     }
 
