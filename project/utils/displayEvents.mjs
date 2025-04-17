@@ -1,9 +1,12 @@
 export default function displayEvents(filter, container, header) {
 
+    let i = 1;
     filter.forEach(event => {
         const card = document.createElement("div")
         card.classList.add("card")
         card.classList.add("event")
+        card.id = `event${i}`;
+        i+=1;
         const title = document.createElement(header)
         title.classList.add("title")
         const image = document.createElement("img")

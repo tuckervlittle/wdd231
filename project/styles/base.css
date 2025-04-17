@@ -230,9 +230,6 @@ nav a img {
 
 /* Home 
 -----------------------------------------------------------*/
-.hero {
-    position: relative;
-}
 .hero img {
     border-radius: 1.5rem;
     width: 100%;
@@ -240,11 +237,6 @@ nav a img {
 h2 {
     font-size: 1.5rem;
     margin: 1.5rem 0;
-}
-#weather {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
 }
 #weather img {
     max-height: 100px;

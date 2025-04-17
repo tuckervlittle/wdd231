@@ -9,16 +9,16 @@ const current = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=
 async function getWeather() {
     try {
         const currentResponse = await fetch(current);
-
+        
         if (!currentResponse.ok) {
             const currentError = await currentResponse.text();
             throw new Error(`Current Weather Error: ${currentError}`);
         }
-
+        
         const currentData = await currentResponse.json();
-
-        console.log(currentData);
-
+        
+        // console.log(currentData);
+        
         displayResults(currentData);
     } catch (error) {
         console.error("Error fetching weather data:", error);
@@ -35,11 +35,10 @@ function unixtime(x) {
 }
 
 function displayResults(currentData) {
-    const divCurrent = document.createElement('div');
 
     const title = document.createElement('h2');
     title.innerHTML = `Currently`;
-    divCurrent.appendChild(title);
+    currentWeather.appendChild(title);
 
     const weatherIcon = document.createElement("img");
     const imgsource = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
@@ -48,36 +47,34 @@ function displayResults(currentData) {
     weatherIcon.setAttribute('alt', imgDescription);
     weatherIcon.setAttribute('width', 100);
     weatherIcon.setAttribute('height', 100);
-    divCurrent.appendChild(weatherIcon);
+    currentWeather.appendChild(weatherIcon);
 
     const currentTemp = document.createElement('p');
     currentTemp.innerHTML = `<b>${currentData.main.temp.toFixed(1)}&deg;F</b>`;
-    divCurrent.appendChild(currentTemp);
+    currentWeather.appendChild(currentTemp);
 
     const description = document.createElement('p');
     description.innerHTML = `<b>Sky:</b> ${currentData.weather[0].description}`;
-    divCurrent.appendChild(description);
+    currentWeather.appendChild(description);
 
     const highTemp = document.createElement('p');
     highTemp.innerHTML = `<b>High:</b> ${currentData.main.temp_max.toFixed(1)}&deg;F`;
-    divCurrent.appendChild(highTemp);
+    currentWeather.appendChild(highTemp);
 
     const lowTemp = document.createElement('p');
     lowTemp.innerHTML = `<b>Low:</b> ${currentData.main.temp_min.toFixed(1)}&deg;F`;
-    divCurrent.appendChild(lowTemp);
+    currentWeather.appendChild(lowTemp);
 
     const humidity = document.createElement('p');
     humidity.innerHTML = `<b>Humidity:</b> ${currentData.main.humidity}%`;
-    divCurrent.appendChild(humidity);
+    currentWeather.appendChild(humidity);
 
     const sunrise = document.createElement('p');
     sunrise.innerHTML = `<b>Sunrise:</b> ${unixtime(currentData.sys.sunrise)} AM`;
-    divCurrent.appendChild(sunrise);
+    currentWeather.appendChild(sunrise);
 
     const sunset = document.createElement('p');
     sunset.innerHTML = `<b>Sunset:</b> ${unixtime(currentData.sys.sunset)} PM`;
-    divCurrent.appendChild(sunset);
-
-    currentWeather.appendChild(divCurrent)
+    currentWeather.appendChild(sunset);
 
 }

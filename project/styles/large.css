@@ -46,29 +46,36 @@
         text-align: left;
     }
 
+    .hero {
+        position: initial;
+    }
+    #weather {
+        position: initial;
+    }
+
     .home {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
-        "h1 h2"
-        "hero event1"
-        "event2 event3";
+        "1 h1 2 2"
+        "hero hero hero hero"
+        "h2 h2 h2 h2"
+        "event1 event1 event2 event2";
     }
     .home h1 {
         grid-area: h1;
     }
     .hero {
+        display: flex;
         grid-area: hero;
     }
     .home h2 {
         grid-area: h2;
     }
-    .home > .event:nth-of-type(1) {
-        grid-area: event3;
-    }
-    .home > .event:nth-of-type(2) {
+    #event1 {
         grid-area: event1;
     }
-    .home > .event:nth-of-type(3) {
+    #event2 {
         grid-area: event2;
     }
 

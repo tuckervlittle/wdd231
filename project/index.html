@@ -28,7 +28,7 @@
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/navigation.js" defer></script>
         <script src="scripts/weather.js" defer></script>
-        <script src="scripts/upcoming.js" type="module"></script>
+        <script src="scripts/home.js" type="module"></script>
 
     </head>
     <body>
@@ -55,11 +55,15 @@
             <section id="events" class="home">
                 <h1>Home</h1>
                 <div class="hero">
-                    <img src="images/hero.webp" alt="Group Photo">
+                    <img id="hero-image" src="images/hero.webp" alt="Group Photo">
                     <div id="weather" class="card"></div>
                 </div>
                 <h2>Upcoming Events</h2>
             </section>
+            <dialog id="visit">
+                <p id="message"></p>
+                <button id="closeModal">X</button>
+            </dialog>
         </main>
         <footer>
             <div>
